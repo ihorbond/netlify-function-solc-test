@@ -1,0 +1,15 @@
+{
+  "name": "netlify-function-solc-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ihor B",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.5.2",
+    "solc": "^0.8.10"
+  }
+}

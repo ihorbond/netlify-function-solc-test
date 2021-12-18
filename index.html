@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Basic HTML5 Template</title>
+  <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="A Basic HTML5 Template">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="A simple HTML5 Template for new projects.">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
+</head>
+
+<body>
+    <h1>Function test</h1>
+    <button id="test">Test It!</button>
+
+    <script>
+      document.getElementById("test").addEventListener("click", async e => {
+        try {
+          const compilationResponse = await fetch(
+              '/.netlify/functions/compile-smart-contract',
+              { 
+                  method: 'POST',
+                  body: JSON.stringify({
+                      "blockchain": 1,
+                      "network": "4",
+                      "hasWhitelist": true,
+                      "hasDelayedReveal": true,
+                      "hasOpenSeaRoyalties": true,
+                      "hasRaribleRoylties": false,
+                      "hasMintableRoylaties": false,
+                      "baseURL": "ipfs://",
+                      "name": "Bored Apes Yacht Club",
+                      "symbol": "BAYC",
+                      "collectionSize": 444,
+                      "mintPrice": 0.05,
+                      "maxTokensPerTransaction": 20,
+                      "whitelistPrice": 0.04,
+                      "delayedRevealURL": "ipfs://",
+                      "email": "email@gmail.com",
+                      "voucherSigner": "0x96F85569e718b19a1cbae445Dc762AAa04dF1010"
+                  }) 
+              }
+          )
+        } catch (error) {
+          console.error(error)
+        }
+        
+      })
+      function testIt() {
+        
+    }
+    </script>
+</body>
+</html>
