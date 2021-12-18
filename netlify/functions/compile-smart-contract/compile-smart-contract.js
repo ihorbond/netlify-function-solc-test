@@ -42,7 +42,10 @@ exports.handler = async function(event, context) {
         settings: {
             outputSelection: { // return everything
                 '*': {
-                    '*': ['*']
+                    "*": [
+                        "abi",
+                        "evm.bytecode.object"
+                      ]
                 }
             }
         }
